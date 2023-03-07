@@ -1,0 +1,39 @@
+.homepageNav {
+  display: flex;
+  flex-direction: column;
+}
+
+.homepageNav h3 {
+  font-size: 25px;
+}
+
+.homepageNav__navItem {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  text-decoration: none;
+  color: #000;
+}
+
+.homepageNav__navItem > *:not(img) {
+  padding: 5px 0;
+}
+
+.homepageNav__navItem h3,
+.homepageNav__navItem p {
+  margin: 0px;
+}
+
+.homepageNav__navItem h3 {
+  align-self: flex-start;
+  padding-left: 10px;
+}
+
+.homepageNav__navItem p {
+  padding-left: 10px;
+  padding-bottom: 20px;
+
+  font-size: 12px;
+  line-height: 20px;
+}
