@@ -22,14 +22,19 @@ export const BeerDetails = () => {
       {beer && (
         <div className="beerDetails">
           <img src={beer.image_url} alt="" />
-          <h2>{beer.name}</h2>
-          <p className="beerDetails__attenuationLevel">
-            {beer.attenuation_level}
-          </p>
-          <p className="beerDetails__firstBrewed">
-            <strong> {beer.first_brewed}</strong>
-          </p>
-          <small className="beerDetails__tagline">{beer.tagline}</small>
+          <div className="beerDetails__firstLine">
+            <h2>{beer.name}</h2>
+            <p className="beerDetails__attenuationLevel">
+              {beer.attenuation_level}
+            </p>
+          </div>
+          <div className="beerDetails__secondLine">
+            <small className="beerDetails__tagline">{beer.tagline}</small>
+            <p>
+              <strong> {beer.first_brewed}</strong>
+            </p>
+          </div>
+
           <p>{beer.description}</p>
           <small className="beerDetails__contributedBy">
             {beer.contributed_by}
