@@ -1,0 +1,14 @@
+.newBeerForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newBeerForm label {
+  padding: 5px;
+}
+
+.newBeerForm__btn {
+  width: 50%;
+  margin-top: 20px;
+}

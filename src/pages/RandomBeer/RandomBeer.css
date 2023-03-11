@@ -1,0 +1,52 @@
+.randomBeer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.randomBeer img {
+  align-self: center;
+  margin-top: 30px;
+  width: 80px;
+}
+
+.randomBeer h2 {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.randomBeer__firstLine,
+.randomBeer__secondLine {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.randomBeer__firstLine > *,
+.randomBeer__secondLine > * {
+  margin: 0;
+}
+
+.randomBeer__attenuationLevel {
+  font-size: 24px;
+}
+
+.randomBeer__tagline,
+.randomBeer__contributedBy,
+.randomBeer__attenuationLevel {
+  font-weight: 400;
+  color: #ccc;
+}
+
+.randomBeer__tagline {
+  font-size: 18px;
+}
+
+.randomBeer__contributedBy {
+  font-size: 14px;
+}
+
+.randomBeer > * {
+  margin: 10px 10px 5px 0px;
+  padding-left: 20px;
+}
