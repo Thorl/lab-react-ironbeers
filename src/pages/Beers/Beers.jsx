@@ -7,6 +7,7 @@ import "./Beers.css";
 
 export const Beers = () => {
   const [beers, setBeers] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     axios
@@ -19,9 +20,23 @@ export const Beers = () => {
       });
   }, []);
 
+  const handleSearchInput = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
+  useEffect(() => {
+    axios
+      .get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${searchQuery}`)
+      .then((response) => {
+        setBeers(response.data);
+      });
+  }, [searchQuery]);
+
   return (
     <div className="beersContainer">
-      {!beers.length && <h2>Loading...</h2>}
+      <label htmlFor="">Search</label>
+      <input type="text" value={searchQuery} onChange={handleSearchInput} />
+      {!beers && <h2>Loading...</h2>}
       {beers.map((singleBeer) => {
         return (
           <Link
